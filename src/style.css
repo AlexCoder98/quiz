@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;1,400&display=swap');
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+html,
+button,
+input,
+select {
+    font-family: "Poppins", arial, sans-serif;
+}
+
+button,
+select,
+input[type="checkbox"],
+label {
+    cursor: pointer;
+}
+
+body {
+    background-repeat: repeat-y;
+}
+
+#modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .4);
+    flex-grow: 1;
+}
+
+#modal .pop-up {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    min-height: 500px;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
+    border-radius: 3px;
+    z-index: 1;
+}
+
+#modal .pop-up .title {
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    color: #212121;
+}
+
+.pop-up header .text {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.pop-up header #username {
+    font-weight: 600;
+}
+
+.pop-up main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 10% 0;
+}
+
+.pop-up main>* {
+    margin-bottom: 3%;
+}
+
+.pop-up main .name-input {
+    padding: 10px 0;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 300;
+    color: #212121;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #212121;
+}
+
+.pop-up main .name-input::placeholder {
+    transition: .2s linear;
+}
+
+.pop-up main .name-input:focus::placeholder {
+    font-size: 18px;
+}
+
+.pop-up main .select-section select {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 300;
+    color: #212121;
+    outline: none;
+    border: 1px solid #212121;
+    transition: .3s linear;
+}
+
+.pop-up main .select-section select>* {
+    font-size: 16px;
+}
+
+.pop-up main .select-section select:hover {
+    color: #fff;
+    background-color: #212121;
+}
+
+.pop-up .answers-container>* {
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.pop-up .answers-container>*:hover {
+    background-color: #f6f6f6;
+    outline: 1px solid #212121;
+}
+
+.pop-up footer {
+    flex-grow: 1;
+    display: flex;
+    align-items: start;
+}
+
+.pop-up footer .btn {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: 300;
+    color: #fff;
+    outline: none;
+    border: 1px solid #212121;
+    background-color: #212121;
+    transition: .3s linear;
+}
+
+.pop-up footer .btn:hover {
+    background-color: #3f3f3f;
+}
+
+.pop-up .question-container {
+    margin-bottom: 5%;
+}
+
+.pop-up .text {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.pop-up .answers-container>* input {
+    margin-right: 8px;
+}
+
+.pop-up .answers-container>* label {
+    font-size: 14px;
+    font-weight: 300;
+    vertical-align: middle;
+}
+
+.pop-up main .result {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.pop-up main .result .emoji {
+    vertical-align: sub;
+    font-size: 28px;
+}
+
+.pop-up main hr {
+    opacity: .4;
+}
+
+@media(max-width: 1280px) {
+    #modal .pop-up {
+        width: 35%;
+    }
+}
+
+@media(max-width: 968px) {
+    #modal .pop-up {
+        width: 40%;
+    }
+}
+
+@media(max-width: 768px) {
+    #modal .pop-up {
+        width: 55%;
+    }
+}
+
+@media(max-width: 550px) {
+    #modal .pop-up {
+        width: 75%;
+    }
+}
+
+@media(max-width: 418px) {
+    #modal .pop-up .title {
+        font-size: 28px;
+    }
+
+    .pop-up main {
+        justify-content: center;
+    }
+
+    .pop-up main .name-input {
+        font-size: 22px;
+    }
+
+    .pop-up main .select-section select {
+        font-size: 18px;
+    }
+
+    .pop-up main .select-section select>* {
+        font-size: 15px;
+    }
+
+    .pop-up footer {
+        align-items: center;
+    }
+
+    .pop-up footer .btn {
+        padding: 7px 0;
+        font-size: 22px;
+    }
+
+    .pop-up .text {
+        font-size: 17px;
+        font-weight: 300;
+    }
+
+    .pop-up main .result {
+        font-size: 20px;
+    }
+
+    .pop-up main .result .emoji {
+        vertical-align: sub;
+        font-size: 28px;
+    }
+
+    .pop-up main hr {
+        opacity: .4;
+    }
+}
+
+@media(max-width: 281px) {
+    #modal .pop-up {
+        width: 90%;
+        min-height: 400px;
+        padding: 20px;
+    }
+
+    #modal .pop-up .title {
+        font-size: 25px;
+    }
+
+    .pop-up main .name-input {
+        font-size: 18px;
+    }
+
+    .pop-up main .select-section select {
+        font-size: 16px;
+    }
+
+    .pop-up main .select-section select>* {
+        font-size: 16px;
+    }
+
+    .pop-up footer .btn {
+        padding: 5px 0;
+        font-size: 18px;
+    }
+}
